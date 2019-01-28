@@ -43,28 +43,17 @@ Form permission options
 This custom package takes a couple steps to install but I will try to make it as simple as possible.
 
 ### Step One:
-Edit your composer.json file
-First, add the path to a private repository.
-Never done this before? Check out the documentation for [adding custom repositories](https://getcomposer.org/doc/05-repositories.md)
-
-```json
-"repositories": [
-	{
-	    "type": "vcs",
-	    "url": "git@github.com:jazmy/laravelformbuilder.git"
-	}
-]
-```
-Second, at the top of your composer.json file add the custom package to the required section
-
-```json
-"jazmy/jaz-form-builder": "dev-master"
-```
-### Step Two:
-Save and close your composer.json file then in your command line type the command to update composer.  This will install the package for you.
+Edit your composer.json file manually or simply type
 
 ```bash
-composer update
+composer require jazmy/jaz-form-builder
+```
+
+### Step Two:
+Ensure you have all your dependencies installed
+
+```bash
+composer install
 ```
 
 *Note: The package will automatically register itself using [Laravel's](https://laravel.com) package discovery feature for versions 5.6 and above. This means you do not need to update your config/app.php file.*
@@ -83,7 +72,7 @@ Run the following command:
 php artisan vendor:publish --tag formbuilder-config
 ```
 ### Step Five:
-Update your blade template file. In the default laravel install the template file is located here: /resources/views/layouts/app.php
+Update your blade template file. In the default laravel install the template file is located here: /resources/views/layouts/app.blade.php
 
 You need to add tags for the new styles and scripts
 At the top of the blade file, just above the closing head tag:
