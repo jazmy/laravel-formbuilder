@@ -1,0 +1,22 @@
+.fb-editor {
+	background-image: #f2f2f2; 
+	/*background: url('http://formbuilder.readthedocs.io/en/latest/img/noise.png');*/
+}
+.five {
+	width: 5% !important;
+}
+.ten {
+	width: 10% !important;
+}
+.fifteen {
+	width: 15% !important;
+}
+.twenty {
+	width: 20% !important;
+}
+.twenty-five {
+	width: 25% !important;
+}
+.d-inline-block {
+	display: inline-block !important;
+}
