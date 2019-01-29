@@ -149,3 +149,6 @@ $my_submissions = Submission::getForUser($user); // returns a paginated resultse
 
 ## Using Events
 The package dispatches a number of events when records are created or updated so that you can listen to these events and perform custom tasks in your application's logic
+
+## Acknowledgments
+Special Thanks to Farayola Oladele, one of the best Laravel programmers on Fiverr: https://www.fiverr.com/harristech He taught me so much and I highly recommend him for assistance on your Laravel projects.
