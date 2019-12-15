@@ -150,5 +150,9 @@ $my_submissions = Submission::getForUser($user); // returns a paginated resultse
 ## Using Events
 The package dispatches a number of events when records are created or updated so that you can listen to these events and perform custom tasks in your application's logic
 
+## Precautions
+1. Make sure you have a table name users with a colum id {bigSignedInteger} in your database.
+2. Once you have submission(s) on a form , dont attempt to edit the form again bacause it will break the display of earlier submissions 3. 
+
 ## Acknowledgments
 Special Thanks to Farayola Oladele, one of the best Laravel programmers on Fiverr: https://www.fiverr.com/harristech He taught me so much and I highly recommend him for assistance on your Laravel projects.
