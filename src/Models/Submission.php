@@ -178,9 +178,13 @@ class Submission extends Model
         }
 
         // if the type is 'file' then we have to render this as a link
-        if ($type == 'file') {
-            $file_link = Storage::url($this->content[$key]);
-            $str = "<a href='{$file_link}'>{$str}</a>";
+        if ($type == 'file') {		
+		if(isset($this->content[$key])){
+			$file_link = Storage::url($this->content[$key]);
+			$str = "<a href='{$file_link}'>{$str}</a>";
+	    	} else {
+			$str = "No file";
+	    	}
         }
 
         return new HtmlString($str);
