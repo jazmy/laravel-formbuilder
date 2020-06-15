@@ -10,6 +10,7 @@ namespace jazmy\FormBuilder\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\HtmlString;
+use Illuminate\Support\Str;
 
 class Submission extends Model
 {
@@ -172,7 +173,7 @@ class Submission extends Model
         }
 
         if ($limit_string) {
-            $str = str_limit($str, 20);
+            $str = Str::limit($str, 20, '');
         }
 
         // if the type is 'file' then we have to render this as a link
