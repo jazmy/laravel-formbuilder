@@ -7,8 +7,6 @@ Last Updated: 12/29/2018
 ----------------------*/
 namespace jazmy\FormBuilder\Models;
 
-use App\User;
-use jazmy\FormBuilder\Models\Form;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\HtmlString;
@@ -47,7 +45,7 @@ class Submission extends Model
      */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(config('formbuilder.models.user'));
     }
 
     /**
@@ -178,7 +176,7 @@ class Submission extends Model
         }
 
         // if the type is 'file' then we have to render this as a link
-        if ($type == 'file') {		
+        if ($type == 'file') {
 		if(isset($this->content[$key])){
 			$file_link = Storage::url($this->content[$key]);
 			$str = "<a href='{$file_link}'>{$str}</a>";
