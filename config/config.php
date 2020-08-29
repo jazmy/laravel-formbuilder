@@ -31,4 +31,11 @@ return [
      * The class that will provide the roles we will display on form create or edit pages?
      */
     'roles_provider' => jazmy\FormBuilder\Services\RolesProvider::class,
+
+    /**
+     * Models used in form builder
+     */
+    'models' => [
+        'user' => \App\User::class,
+    ],
 ];
