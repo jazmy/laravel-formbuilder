@@ -1,4 +1,7 @@
+
 # Laravel Form Builder Package
+
+Note: THIS PACKAGE MAY NOT B COMPATIBLE WITH LARAVEL 7 or 8. I am no longer maintaining this package so please use the code for reference on how to create a jquery form builder.
 
 A [Laravel](https://laravel.com) package for creating a drag-and-drop form builder using the [JQuery Form Builder](https://formbuilder.online).
 
